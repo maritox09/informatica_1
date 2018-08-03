@@ -1,0 +1,45 @@
+\documentclass[]{article}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\begin{document}
+\begin{center}
+\Huge
+Hoja de trabajo \# 2\\
+\end{center}
+\Large
+Ejercicio \# 1\\
+\normalsize
+Demostración por inducción:\\
+\begin{center}
+$\forall n.n$ $n^3 \geq  n^2$ donde  $ n \in \mathbb{N}$\\~\\
+Asumiendo que la expresión anterior es verdadera podemos inducir lo siguiente:\\~\\
+$n^3 \geq  n^2$\\~\\
+$\Longrightarrow \frac{n^3}{n^2} \geq  1$\\~\\
+$\Longrightarrow n^{3-2} \geq 1$\\~\\
+$\Longrightarrow n^1 \geq 1$\\~\\
+$\Longrightarrow n \geq 1$\\~\\
+Con esto se demuestra que el enunciado $n^3 \geq  n^2$ es verdadero para $\mathbb{N}$\\~\\
+\end{center}
+\Large
+Ejercicio \# 2\\
+\normalsize
+Demostración por inducción:\\
+\begin{center}
+$\forall n.$ $(1+x)^n \geq nx$ Donde $n \in \mathbb{N}, x \in \mathbb{Q} $ y $ x \geq -1$\\~\\
+Asumiendo que la expresión anterior es verdadera y $n = 1$ podemos inducir lo siguiente:\\
+Usando el \emph{consejo} el lado izquierdo sera $nx +1$\\~\\
+$(1+x)^n \geq 1+nx$\\~\\
+$\Longrightarrow (1+x)^1 \geq 1+1x$\\~\\
+$\Longrightarrow 1+x \geq 1+x$\\~\\
+Con esto queda demostrado que la desigualdad es verdadera para $n=1$\\~\\
+Ahora se utiliza el método de inducción suponiendo que $\forall n.$ $(1+x)^n \geq nx$ si $x \geq -1$\\
+Sabiendo la condición $x \geq -1$ entonces $x+1 \geq 0$ así que se puede alterar ambos lados de la desigualdad sin cambiar la dirección de la misma.\\~\\
+$(1+x)^{n+1} \geq (1+nx)(1+x)$\\~\\
+$\Longrightarrow (1+x)^{n+1} \geq 1+x(n+1)+nx^2$\\~\\
+Sabiendo que $n \in \mathbb{N}$ y $x^2 \geq 0$ entonces $nx^2 \geq 0$\\~\\
+Esto verifica que $(1+x)^{n+1} \geq 1+x(n+1)$ de forma que $(1+x)^n \geq 1+nx$ también es aplicable con $n+1$\\~\\~\\~\\~\\
+\end{center}
+\small
+Jose Mario Yon Cordon
+\end{document}
