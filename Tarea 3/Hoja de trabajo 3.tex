@@ -1,0 +1,90 @@
+\documentclass[]{article}
+\usepackage[margin=0.5in]{geometry}
+\begin{document}
+\begin{center}
+\Huge
+Hoja de trabajo $\# 3$\\~\\
+\end{center}
+\Large
+Ejercicio $\# 1$\\~\\
+\normalsize
+Realzar $[s(s(s(0)))] \oplus [s(s(s(s(0))))]$ paso por paso:\\~\\
+\begin{center}
+Empezamos con $[s(s(s(0)))] \oplus [s(s(s(s(0))))]$\\~\\
+$\rightarrow s[s(s(0) \oplus s(s(s(s(0)))))]$\\~\\
+$\rightarrow s[s[s(0) \oplus s(s(s(s(0))))]]$\\~\\
+$\rightarrow s[s[s[0 \oplus s(s(s(s(0))))]]]$\\~\\
+$\rightarrow s[s[s[s(s(s(s(0))))]]]$\\~\\
+$\rightarrow s(s(s(s(s(s(s(0)))))))$\\~\\
+\end{center}
+\Large 
+Ejercicio $\# 2$\\~\\
+\normalsize
+Definicion de multiplicacion para numeros unarios $(\otimes)$:\\~\\
+\[
+        n\otimes m = \left\{
+        \begin{array}{l l}
+            0 & \mbox{si } n=0 \\
+            0 & \mbox{si } m=0 \\
+            n \oplus (n \otimes i) & \mbox{si } m=s(i)\\
+        \end{array}
+        \right.
+\]
+\Large 
+Ejercicio $\# 3$\\~\\
+\normalsize
+Verificacion de la definicion de la multiplicacion del problema $\# 2$:\\~\\
+$s(s(s(0))) \otimes 0$:\\
+\begin{center}
+$s(s(s(0))) \otimes 0 = 0$ Por la segunda propiedad: $n \otimes m = 0 $ si $ m = 0$\\~\\
+\end{center}
+$s(s(s(0))) \otimes s(0)$:\\
+\begin{center}
+$s(s(s(0))) \otimes s(0)$\\~\\
+$\rightarrow s(s(s(0))) \oplus [s(s(s(0))) \otimes 0]$\\~\\
+Por la definicion sabemos que el resultado del lado derecho de la \emph{suma} es $0$\\~\\
+$\rightarrow s(s(s(0))) \oplus 0$\\~\\
+$\rightarrow s(s(s(0)))$
+\end{center}
+\newpage
+$s(s(s(0))) \otimes s(s(0))$:\\
+\begin{center}
+$s(s(s(0))) \otimes s(s(0))$\\~\\
+$\rightarrow s(s(s(0))) \oplus [s(s(s(0))) \oplus s(0)]$\\~\\
+$\rightarrow s(s(s(0))) \oplus [s(s(s(0))) \oplus [s(s(s(0))) \otimes 0]]$\\~\\
+$\rightarrow s(s(s(0))) \oplus [s(s(s(0))) \oplus 0]$\\~\\
+$\rightarrow s(s(s(0))) \oplus s(s(s(0))$\\~\\
+$\rightarrow s[s(s(0)) \oplus s(s(s(0)))]$\\~\\
+$\rightarrow s[s[s(0) \oplus s(s(s(0)]]$\\~\\
+$\rightarrow s[s[s[0 \oplus s(s(s(0))]]]$\\~\\
+$\rightarrow s[s[s[s(s(s(0)))]]]$\\~\\
+$\rightarrow s(s(s(s(s(s(0))))))$\\~\\
+\end{center}
+\Large
+Ejercicio $\# 4$\\~\\
+\normalsize
+$a \oplus s(s(0)) = s(s(a))$:\\
+\begin{center}
+Tomamos la parte derecha de la igualdad y la modificamos de la siguiente forma:\\~\\
+$\rightarrow a \oplus s(s(0))$\\~\\
+$\rightarrow s(s(0)) \oplus a$\\~\\
+$\rightarrow s[s(0)+a]$\\~\\
+$\rightarrow s[s[0+a]]$\\~\\
+Por definicion de la suma sabemos que $0+a=a$\\~\\
+$\rightarrow s[s(a)]$\\~\\
+$\rightarrow s(s(a)) = s(s(a))$\\~\\
+\end{center}
+\newpage
+$a \otimes b = b \otimes a$:\\
+\begin{center}
+No pude :'(
+\end{center}
+$a \otimes (b \otimes c)=(a\otimes b)\otimes c$\\
+\begin{center}
+Esta tampoco :'(
+\end{center}
+$(a\oplus b)\otimes c = (a\otimes c) \oplus (b \otimes c)$
+\begin{center}
+Esta menos :'(
+\end{center}
+\end{document}
